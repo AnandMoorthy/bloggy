@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+    <head>
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstraptheme.css">
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstraptheme.min.css">
+
+        <title>Bloggy-A Personel Blogger</title>
+    </head>
+        {% block main %}
+        <div id="login">
+            <form class="form-horizontal" name="LoginForm" action="/login/" method="post">
+            {% csrf_token %}
+            {% if next %}
+                <input type="hidden" name="next" value="{{ next }}" />
+            {% endif %}
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Username</span>
+                <div class="controls">
+                <input type="text" class="form-control" id="username" placeholder="Username" name="username" >
+                </div>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon2">Password</span>
+                <div class="controls">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                </div>
+            </div>
+            <br>
+            <div class="input-group">
+                <div class="controls">
+                <button type="submit" class="btn btn-success" algin="center">Login</button>
+                </div>
+            </div> 
+            </form>
+        </div>
+
+        {% endblock %}
+
+
+
+
+
+
+
+
+
+    

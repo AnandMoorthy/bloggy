@@ -1,0 +1,10 @@
+h1 {
+  color:red;
+}
+
+p {
+  text-align:justify;
+  margin:0 auto;
+  width:50em;
+  font-size:18px
+}
